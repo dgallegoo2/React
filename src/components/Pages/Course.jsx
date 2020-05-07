@@ -1,5 +1,5 @@
 import React from 'react'
-import CourseGrid from './CourseGrid'
+import CourseGrid from '../Organisms/CourseGrid.jsx'
 
 const cursos = [
     {
