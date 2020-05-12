@@ -2,20 +2,22 @@ import React from 'react'
 import '../styles/style.scss'
 import CourseCard from './Molecules/CourseCard.jsx'
 //import Formulario from './components/Formulario.jsx';
-import CourseGrid from './Organisms/CourseGrid.jsx';
+import Courses from './Pages/Courses.jsx';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Formulario from './Pages/Form.jsx'
 import Course from './Pages/Course.jsx'
-import MainMenu from './MainMenu.jsx'
+import MainMenu from './Organisms/MainMenu.jsx'
 import History from './Pages/History.jsx'
 import Users from './Pages/Users.jsx'
+import Home from './Pages/Home';
 
 const App = () => (
   <Router>
     <MainMenu/>
     <Switch>
+      <Route path="/" exact component={ Home } />
       <Route path="/cursos/:id" component={ Course } />
-      <Route path="/cursos" component={ CourseGrid } />  
+      <Route path="/cursos" component={ Courses } />  
       <Route path="/historial/:valor" component={ History } />        
       <Route path="/historial" component={ History } /> 
       <Route path="/usuarios" component={ Users } /> 
